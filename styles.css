@@ -1,0 +1,211 @@
+/* ======== RESET BÁSICO ======== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: #f5f6fa;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ======== CABEÇALHO ======== */
+.header {
+  background: #30475e;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* ======== PRINCIPAL ======== */
+.main {
+  flex: 1;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ======== CONTROLES ======== */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: #e8edf3;
+  border-radius: 12px;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.controls .btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background-color: #0077ff;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background-color: #005fd6;
+}
+
+.btn.danger {
+  background-color: #c94c4c;
+  color: #fff;
+}
+
+.btn.danger:hover {
+  background-color: #a73939;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* ======== DISPLAY PRINCIPAL ======== */
+.display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-around;
+}
+
+.current {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.current h2 {
+  margin-bottom: 0.5rem;
+}
+
+.element-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 160px;
+  margin: 0 auto;
+  transition: 0.3s;
+}
+
+.element-card .el-symbol {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.element-card .el-number {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.element-card.empty {
+  background: #ddd;
+  color: #777;
+}
+
+/* ======== GRADE DE ELEMENTOS SORTEADOS ======== */
+.drawn-list {
+  flex: 2;
+}
+
+.grid-drawn {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 8px;
+  margin-top: 0.5rem;
+}
+
+.grid-drawn .element-card {
+  width: 70px;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.grid-drawn .el-symbol {
+  font-size: 1.3rem;
+}
+
+/* ======== CARTELA ======== */
+.cartela-area {
+  text-align: center;
+}
+
+.bingo-card {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.bingo-card .element-card {
+  padding: 0.6rem;
+  cursor: pointer;
+}
+
+/* ======== LEGENDA E RODAPÉ ======== */
+.legend {
+  background: #e8edf3;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.footer {
+  background: #30475e;
+  color: #fff;
+  text-align: center;
+  padding: 0.8rem;
+  margin-top: auto;
+}
+
+/* ======== CORES POR TIPO DE ELEMENTO ======== */
+.metal {
+  background: #b8e0f5;
+}
+
+.nao-metal {
+  background: #f9d29d;
+}
+
+.semimetal {
+  background: #d4c4fb;
+}
+
+.gas-nobre {
+  background: #b9fbc0;
+}
+
+.halogenio {
+  background: #f6b8b8;
+}
+
+.outro {
+  background: #ececec;
+}
+
+/* ======== DESTQUE DO ÚLTIMO SORTEADO ======== */
+#lastDrawn {
+  border: 3px solid #0077ff;
+}
