@@ -1,75 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bingo da Tabela Periódica</title>
-  <!-- CSS será fornecido separadamente -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <h1>Bingo da Tabela Periódica</h1>
-    <p class="subtitle">Cada "pedra" = 1 elemento. Sorteie e acompanhe os elementos já sorteados.</p>
-  </header>
+  <h1>🧪 Bingo da Tabela Periódica</h1>
 
-  <main class="main">
-    <section class="controls">
-      <div class="left-controls">
-        <button id="drawBtn" class="btn primary">Sortear elemento</button>
-        <button id="autoDrawBtn" class="btn">Sortear automático</button>
-        <button id="resetBtn" class="btn danger">Resetar sorteios</button>
-      </div>
+  <div class="controls">
+    <button id="btnSortear">🎲 Sortear Elemento</button>
+    <button id="btnAuto">▶️ Sorteio Automático</button>
+    <button id="btnReiniciar">🔄 Reiniciar</button>
+    <button id="btnGerarCartela">📄 Gerar Cartela</button>
+  </div>
 
-      <div class="right-controls">
-        <label for="delayInput">Intervalo auto (s)</label>
-        <input id="delayInput" type="number" min="1" value="3" />
-        <button id="generateCardBtn" class="btn">Gerar cartela</button>
-        <button id="downloadCardBtn" class="btn">Baixar cartela (PNG)</button>
-      </div>
-    </section>
+  <div id="lastDrawn" class="display-area"></div>
 
-    <section class="display">
-      <div class="current">
-        <h2>Último sorteado</h2>
-        <div id="lastDrawn" class="element-card empty">
-          <div class="el-symbol"></div>
-          <div class="el-name"></div>
-          <div class="el-number"></div>
-        </div>
-      </div>
+  <h2>🧠 Elementos já sorteados</h2>
+  <div id="drawnGrid" class="grid"></div>
 
-      <div class="drawn-list">
-        <h2>Elementos sorteados</h2>
-        <div id="drawnContainer" class="grid-drawn">
-          <!-- Element cards aparecem aqui dinamicamente -->
-        </div>
-      </div>
-    </section>
+  <h2>🧍‍♂️ Sua Cartela</h2>
+  <div id="cartela"></div>
 
-    <section class="cartela-area">
-      <h2>Sua cartela (5x5)</h2>
-      <div id="cardContainer" class="bingo-card">
-        <!-- A cartela será gerada via JS -->
-      </div>
-    </section>
+  <h2>🧬 Tabela Periódica (visual)</h2>
+  <div id="periodicTable" class="periodic-table"></div>
 
-    <section class="legend">
-      <h3>Como usar</h3>
-      <ol>
-        <li>Clique em <strong>Sortear elemento</strong> para sortear um elemento aleatório.</li>
-        <li>O painel "Último sorteado" mostra o elemento atual; "Elementos sorteados" mostra o histórico.</li>
-        <li>Clique em <strong>Gerar cartela</strong> para criar uma cartela 5×5 com elementos aleatórios.</li>
-        <li>Você pode baixar a cartela como imagem com <strong>Baixar cartela (PNG)</strong>.</li>
-      </ol>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <small>Desenvolvido para uso educativo — personalize e adapte em sala de aula.</small>
-  </footer>
-
-  <!-- JavaScript será fornecido separadamente -->
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
