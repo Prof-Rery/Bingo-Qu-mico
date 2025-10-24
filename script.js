@@ -1,49 +1,40 @@
-// ======== ELEMENTOS DA TABELA PERIÓDICA (resumo simplificado) ========
+// ======== DADOS DOS ELEMENTOS ========
 const elementos = [
-  { simbolo: "H", nome: "Hidrogênio", tipo: "nao-metal" },
-  { simbolo: "He", nome: "Hélio", tipo: "gas-nobre" },
-  { simbolo: "Li", nome: "Lítio", tipo: "metal" },
-  { simbolo: "Be", nome: "Berílio", tipo: "metal" },
-  { simbolo: "B", nome: "Boro", tipo: "semimetal" },
-  { simbolo: "C", nome: "Carbono", tipo: "nao-metal" },
-  { simbolo: "N", nome: "Nitrogênio", tipo: "nao-metal" },
-  { simbolo: "O", nome: "Oxigênio", tipo: "nao-metal" },
-  { simbolo: "F", nome: "Flúor", tipo: "halogenio" },
-  { simbolo: "Ne", nome: "Neônio", tipo: "gas-nobre" },
-  { simbolo: "Na", nome: "Sódio", tipo: "metal" },
-  { simbolo: "Mg", nome: "Magnésio", tipo: "metal" },
-  { simbolo: "Al", nome: "Alumínio", tipo: "metal" },
-  { simbolo: "Si", nome: "Silício", tipo: "semimetal" },
-  { simbolo: "P", nome: "Fósforo", tipo: "nao-metal" },
-  { simbolo: "S", nome: "Enxofre", tipo: "nao-metal" },
-  { simbolo: "Cl", nome: "Cloro", tipo: "halogenio" },
-  { simbolo: "Ar", nome: "Argônio", tipo: "gas-nobre" },
-  { simbolo: "K", nome: "Potássio", tipo: "metal" },
-  { simbolo: "Ca", nome: "Cálcio", tipo: "metal" },
-  { simbolo: "Sc", nome: "Escândio", tipo: "metal" },
-  { simbolo: "Ti", nome: "Titânio", tipo: "metal" },
-  { simbolo: "V", nome: "Vanádio", tipo: "metal" },
-  { simbolo: "Cr", nome: "Cromo", tipo: "metal" },
-  { simbolo: "Mn", nome: "Manganês", tipo: "metal" },
-  { simbolo: "Fe", nome: "Ferro", tipo: "metal" },
-  { simbolo: "Co", nome: "Cobalto", tipo: "metal" },
-  { simbolo: "Ni", nome: "Níquel", tipo: "metal" },
-  { simbolo: "Cu", nome: "Cobre", tipo: "metal" },
-  { simbolo: "Zn", nome: "Zinco", tipo: "metal" },
-  { simbolo: "Br", nome: "Bromo", tipo: "halogenio" },
-  { simbolo: "Kr", nome: "Criptônio", tipo: "gas-nobre" },
-  { simbolo: "Ag", nome: "Prata", tipo: "metal" },
-  { simbolo: "Sn", nome: "Estanho", tipo: "metal" },
-  { simbolo: "I", nome: "Iodo", tipo: "halogenio" },
-  { simbolo: "Xe", nome: "Xenônio", tipo: "gas-nobre" },
-  { simbolo: "Pt", nome: "Platina", tipo: "metal" },
-  { simbolo: "Au", nome: "Ouro", tipo: "metal" },
-  { simbolo: "Hg", nome: "Mercúrio", tipo: "metal" },
-  { simbolo: "Pb", nome: "Chumbo", tipo: "metal" },
-  { simbolo: "U", nome: "Urânio", tipo: "metal" }
+  { simbolo: "H", nome: "Hidrogênio", tipo: "nao-metal", pos: 1 },
+  { simbolo: "He", nome: "Hélio", tipo: "gas-nobre", pos: 18 },
+  { simbolo: "Li", nome: "Lítio", tipo: "metal", pos: 3 },
+  { simbolo: "Be", nome: "Berílio", tipo: "metal", pos: 4 },
+  { simbolo: "B", nome: "Boro", tipo: "semimetal", pos: 5 },
+  { simbolo: "C", nome: "Carbono", tipo: "nao-metal", pos: 6 },
+  { simbolo: "N", nome: "Nitrogênio", tipo: "nao-metal", pos: 7 },
+  { simbolo: "O", nome: "Oxigênio", tipo: "nao-metal", pos: 8 },
+  { simbolo: "F", nome: "Flúor", tipo: "halogenio", pos: 9 },
+  { simbolo: "Ne", nome: "Neônio", tipo: "gas-nobre", pos: 10 },
+  { simbolo: "Na", nome: "Sódio", tipo: "metal", pos: 11 },
+  { simbolo: "Mg", nome: "Magnésio", tipo: "metal", pos: 12 },
+  { simbolo: "Al", nome: "Alumínio", tipo: "metal", pos: 13 },
+  { simbolo: "Si", nome: "Silício", tipo: "semimetal", pos: 14 },
+  { simbolo: "P", nome: "Fósforo", tipo: "nao-metal", pos: 15 },
+  { simbolo: "S", nome: "Enxofre", tipo: "nao-metal", pos: 16 },
+  { simbolo: "Cl", nome: "Cloro", tipo: "halogenio", pos: 17 },
+  { simbolo: "Ar", nome: "Argônio", tipo: "gas-nobre", pos: 18 },
+  { simbolo: "K", nome: "Potássio", tipo: "metal", pos: 19 },
+  { simbolo: "Ca", nome: "Cálcio", tipo: "metal", pos: 20 },
+  { simbolo: "Fe", nome: "Ferro", tipo: "metal", pos: 26 },
+  { simbolo: "Cu", nome: "Cobre", tipo: "metal", pos: 29 },
+  { simbolo: "Zn", nome: "Zinco", tipo: "metal", pos: 30 },
+  { simbolo: "Br", nome: "Bromo", tipo: "halogenio", pos: 35 },
+  { simbolo: "Ag", nome: "Prata", tipo: "metal", pos: 47 },
+  { simbolo: "Sn", nome: "Estanho", tipo: "metal", pos: 50 },
+  { simbolo: "I", nome: "Iodo", tipo: "halogenio", pos: 53 },
+  { simbolo: "Xe", nome: "Xenônio", tipo: "gas-nobre", pos: 54 },
+  { simbolo: "Au", nome: "Ouro", tipo: "metal", pos: 79 },
+  { simbolo: "Hg", nome: "Mercúrio", tipo: "metal", pos: 80 },
+  { simbolo: "Pb", nome: "Chumbo", tipo: "metal", pos: 82 },
+  { simbolo: "U", nome: "Urânio", tipo: "metal", pos: 92 },
 ];
 
-// ======== VARIÁVEIS DE ESTADO ========
+// ======== VARIÁVEIS ========
 let elementosRestantes = [...elementos];
 let sorteados = [];
 let sorteioAtivo = false;
@@ -53,12 +44,32 @@ let timer;
 const btnSortear = document.getElementById("btnSortear");
 const btnAuto = document.getElementById("btnAuto");
 const btnReiniciar = document.getElementById("btnReiniciar");
+const btnGerarCartela = document.getElementById("btnGerarCartela");
 const cardAtual = document.getElementById("lastDrawn");
 const gridSorteados = document.getElementById("drawnGrid");
-const btnGerarCartela = document.getElementById("btnGerarCartela");
 const cartela = document.getElementById("cartela");
+const periodicTable = document.getElementById("periodicTable");
 
 // ======== FUNÇÕES ========
+
+// Cria visualização da tabela periódica
+function criarTabelaPeriodica() {
+  for (let i = 1; i <= 118; i++) {
+    const el = elementos.find(e => e.pos === i);
+    const cell = document.createElement("div");
+    cell.classList.add("element-cell");
+
+    if (el) {
+      cell.textContent = el.simbolo;
+      cell.id = `cell-${el.simbolo}`;
+      cell.dataset.tipo = el.tipo;
+    } else {
+      cell.classList.add("vazio");
+    }
+
+    periodicTable.appendChild(cell);
+  }
+}
 
 // Atualiza o display do último elemento sorteado
 function mostrarElemento(el) {
@@ -84,6 +95,14 @@ function atualizarSorteados() {
   `).join("");
 }
 
+// Destaca o elemento sorteado na tabela periódica
+function destacarNaTabela(simbolo, tipo) {
+  const cell = document.getElementById(`cell-${simbolo}`);
+  if (cell) {
+    cell.className = `element-cell ${tipo} sorted`;
+  }
+}
+
 // Sorteia um novo elemento
 function sortearElemento() {
   if (elementosRestantes.length === 0) {
@@ -97,9 +116,10 @@ function sortearElemento() {
   sorteados.push(el);
   mostrarElemento(el);
   atualizarSorteados();
+  destacarNaTabela(el.simbolo, el.tipo);
 }
 
-// Inicia sorteio automático
+// Sorteio automático
 function iniciarSorteioAuto() {
   if (sorteioAtivo) return;
   sorteioAtivo = true;
@@ -107,23 +127,27 @@ function iniciarSorteioAuto() {
   timer = setInterval(sortearElemento, 3000);
 }
 
-// Para sorteio automático
 function pararSorteio() {
   sorteioAtivo = false;
   clearInterval(timer);
   btnAuto.textContent = "▶️ Sorteio Automático";
 }
 
-// Reinicia o jogo
+// Reiniciar jogo
 function reiniciarJogo() {
   pararSorteio();
   elementosRestantes = [...elementos];
   sorteados = [];
   mostrarElemento(null);
   atualizarSorteados();
+
+  // resetar tabela
+  document.querySelectorAll(".element-cell").forEach(cell => {
+    cell.className = "element-cell";
+  });
 }
 
-// Gera cartela 5x5 com elementos aleatórios
+// Gera cartela de bingo 5x5
 function gerarCartela() {
   const copia = [...elementos];
   const selecionados = [];
@@ -153,4 +177,5 @@ btnReiniciar.addEventListener("click", reiniciarJogo);
 btnGerarCartela.addEventListener("click", gerarCartela);
 
 // ======== INICIALIZAÇÃO ========
+criarTabelaPeriodica();
 mostrarElemento(null);
