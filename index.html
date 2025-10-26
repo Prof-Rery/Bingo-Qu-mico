@@ -7,25 +7,37 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🧪 Bingo da Tabela Periódica</h1>
 
-  <div class="controls">
-    <button id="btnSortear">🎲 Sortear Elemento</button>
-    <button id="btnAuto">▶️ Sorteio Automático</button>
-    <button id="btnReiniciar">🔄 Reiniciar</button>
-    <button id="btnGerarCartela">📄 Gerar Cartela</button>
-  </div>
+  <header>
+    <h1>🎯 Bingo da Tabela Periódica</h1>
+    <p>Descubra os elementos e aprenda enquanto joga!</p>
+  </header>
 
-  <div id="lastDrawn" class="display-area"></div>
+  <main>
+    <section id="painel-controle">
+      <button onclick="sortearElemento()">🎲 Sortear Elemento</button>
+    </section>
 
-  <h2>🧠 Elementos já sorteados</h2>
-  <div id="drawnGrid" class="grid"></div>
+    <section id="display-sorteio">
+      <div id="sorteado" class="display">
+        <p>Nenhum elemento sorteado ainda</p>
+      </div>
+    </section>
 
-  <h2>🧍‍♂️ Sua Cartela</h2>
-  <div id="cartela"></div>
+    <section id="historico-container">
+      <h2>Elementos Sorteados</h2>
+      <div id="historico"></div>
+    </section>
 
-  <h2>🧬 Tabela Periódica (visual)</h2>
-  <div id="periodicTable" class="periodic-table"></div>
+    <section id="tabela-periodica-container">
+      <h2>Tabela Periódica</h2>
+      <div id="tabela"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Desenvolvido como recurso didático de Química 🧪</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
