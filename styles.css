@@ -1,167 +1,166 @@
-/* ======== ESTILO GERAL ======== */
+/* ======== CONFIGURAÇÕES GERAIS ======== */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f6f8fa;
-  color: #222;
-  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f6fa;
   margin: 0;
-  padding: 20px;
+  padding: 0;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+  background: linear-gradient(90deg, #5a8dee, #7ab6ff);
+  color: white;
+  width: 100%;
+  padding: 20px 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-  color: #0066aa;
-  margin-bottom: 10px;
+  margin: 0;
+  font-size: 2rem;
 }
 
-h2 {
-  margin-top: 40px;
-  color: #444;
+main {
+  width: 95%;
+  max-width: 1200px;
+  margin-top: 20px;
 }
 
 button {
-  background: #007bff;
+  background-color: #5a8dee;
   color: white;
   border: none;
-  padding: 10px 18px;
-  margin: 6px;
-  border-radius: 6px;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: 1rem;
   cursor: pointer;
-  font-size: 15px;
   transition: 0.3s;
 }
 
 button:hover {
-  background: #005bb5;
+  background-color: #4776d8;
 }
 
-/* ======== EXIBIÇÃO DO ÚLTIMO ELEMENTO ======== */
-.display-area {
-  margin: 20px auto;
-  width: 160px;
-  height: 160px;
+/* ======== ÁREA DE SORTEIO ======== */
+#display-sorteio {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.display {
+  background-color: white;
   border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  min-height: 100px;
 }
 
-.element-card {
-  width: 60px;
-  height: 60px;
-  border-radius: 8px;
-  background: #eaeaea;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 4px;
+.elemento-sorteado {
   font-weight: bold;
-  transition: 0.3s;
 }
 
-.el-symbol {
-  font-size: 20px;
+.elemento-sorteado h1 {
+  font-size: 3rem;
+  margin: 10px 0;
 }
 
-.el-name {
-  font-size: 11px;
+/* ======== HISTÓRICO DE ELEMENTOS ======== */
+#historico-container {
+  margin: 20px 0;
 }
 
-/* ======== CORES POR TIPO ======== */
-.metal {
-  background: #f5b971;
-}
-
-.nao-metal {
-  background: #7ed957;
-}
-
-.halogenio {
-  background: #ff6666;
-}
-
-.gas-nobre {
-  background: #88d9ff;
-}
-
-.semimetal {
-  background: #d2a5ff;
-}
-
-.empty {
-  color: #999;
-}
-
-/* ======== GRID DE ELEMENTOS SORTEADOS ======== */
-.grid {
+#historico {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  max-width: 600px;
-  margin: 0 auto;
+  gap: 6px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  min-height: 40px;
 }
 
-/* ======== CARTELA ======== */
-.bingo-card {
-  display: grid;
-  grid-template-columns: repeat(5, 60px);
-  grid-gap: 6px;
-  justify-content: center;
-  margin: 20px auto;
+.historico-item {
+  background: #e8eefc;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: bold;
 }
 
 /* ======== TABELA PERIÓDICA ======== */
-.periodic-table {
-  display: grid;
-  grid-template-columns: repeat(18, 40px);
-  grid-gap: 3px;
-  justify-content: center;
-  margin: 20px auto;
-  max-width: 800px;
+#tabela-periodica-container {
+  margin-top: 40px;
 }
 
-.element-cell {
-  width: 40px;
-  height: 40px;
-  border-radius: 6px;
-  background: #dcdcdc;
-  font-size: 13px;
+#tabela {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  gap: 4px;
+  background: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.linha {
+  display: contents; /* mantém o grid das colunas */
+}
+
+.celula {
+  width: 100%;
+  aspect-ratio: 1;
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-weight: bold;
-  cursor: default;
+  align-items: center;
+}
+
+.elemento {
+  background-color: #f0f3f7;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  padding: 4px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   transition: 0.3s;
 }
 
-.element-cell.sorted {
-  border: 2px solid #222;
+.elemento small {
+  font-size: 0.7rem;
+  opacity: 0.6;
+}
+
+.elemento h3 {
+  margin: 4px 0 0 0;
+  font-size: 1.1rem;
+}
+
+/* ======== ELEMENTO SORTEADO ======== */
+.elemento.sorteado {
+  background-color: #ffce54;
+  border-color: #f4a400;
   transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 193, 7, 0.6);
 }
 
 /* ======== RESPONSIVIDADE ======== */
+@media (max-width: 900px) {
+  #tabela {
+    grid-template-columns: repeat(9, 1fr);
+  }
+}
+
 @media (max-width: 600px) {
-  .bingo-card {
-    grid-template-columns: repeat(5, 50px);
+  #tabela {
+    grid-template-columns: repeat(6, 1fr);
   }
-
-  .element-card {
-    width: 50px;
-    height: 50px;
-  }
-
-  .el-symbol {
-    font-size: 16px;
-  }
-
-  .periodic-table {
-    grid-template-columns: repeat(9, 35px);
-  }
-
-  .element-cell {
-    width: 35px;
-    height: 35px;
+  button {
+    width: 100%;
   }
 }
