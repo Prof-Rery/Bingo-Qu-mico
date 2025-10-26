@@ -199,6 +199,3 @@ function sortearElemento() {
   const celula = document.getElementById(`el-${sorteado.simbolo}`);
   if (celula) celula.classList.add("sorteado");
 }
-
-// ========== Inicialização ==========
-document.addEventListener("DOMContentLoaded", gerarTabelaPeriodica);
